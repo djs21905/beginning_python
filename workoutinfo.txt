@@ -1,0 +1,8 @@
+Day:Body Part
+M:Chest/Cardio
+T:Cardio/Stretch
+W:Back/Biceps
+Th:Legs/Cardio
+F:Cardio/Stretch
+Sa:Shoulders
+S:Cario/Stretch
