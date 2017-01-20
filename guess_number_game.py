@@ -1,6 +1,8 @@
 # Guess the number game.
 #Testing Updates
 #Pushing to GitHub seems to work fine now.  Good news.
+#I am still testing the push function.  Can be a bit tricky at first.
+
 import random
 
 print('Hello what is your name?')
