@@ -2,6 +2,7 @@
 #Testing Updates
 #Pushing to GitHub seems to work fine now.  Good news.
 #I am still testing the push function.  Can be a bit tricky at first.
+#Changed this from GitHub.com to test the pull command
 
 import random
 
