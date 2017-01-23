@@ -31,6 +31,6 @@ def gallows(number):
        
 
 #Tests all of the different possible drawings
-for x in range(7):
-    gallows(x)
+""""for x in range(7):
+    gallows(x)"""
             
