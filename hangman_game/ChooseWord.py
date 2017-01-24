@@ -20,7 +20,6 @@ def chooseWord():
                                         print('Your word contained a prohibited character')
                                         print('')
                                         Switch = 30
-                                        #I need to break out of the for loop and re renter the main loop (add break?)
                         while Switch == 20:
                                 print('Did you choose the proper word?   Word = ' + player_word)
                                 print('Type \"Yes\" if you did and \"No\" if you didnt')
@@ -42,6 +41,3 @@ def drawEmptyLines(player_word_as_list):
                         print('____ ', end = '')
 
 
-a= chooseWord()
-
-drawEmptyLines(a)
