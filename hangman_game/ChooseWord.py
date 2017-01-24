@@ -1,31 +1,47 @@
-#Function that allows the player to choose a word.
-#Must make all incoming letters set to lowercase
-#Cannot contain numbers or special characters
-#If everything above is met, empty lines are drawn for the number of chars in word
-
-#TODO prevent bad characters from being used.
+# Player Chooses a word <21 Chars
+# If the Word is <21 chars it enters the for loop 
+# If the word is >=21 the program prompts the user to enter a word of proper length. 
+# The for loop checks each item in the bad_characters_list against the player_word_as_list
+# If one of those items shows up in the player_word_as_list "fail" is printed
+# Otherwise, the player_word_as_list is returned.
 
 def chooseWord():
-    while True:
-        print('Please enter a word')
-        player_word = input()
         bad_characters = '0123456789!@#/<>`~!.?'
         bad_characters_list = list(bad_characters)
-        player_word_as_list = list(player_word.lower())
-        for item in player_word_as_list:
-                if len(player_word_as_list) <=20 and item not in bad_characters_list:
-                    print(item)
+        while True:
+                Switch = 20
+                print('Please enter a word')
+                player_word = input()
+                player_word_as_list = list(player_word.lower())
+                if len(player_word_as_list) > 0 and len(player_word_as_list)  <= 20:
+                        for char in bad_characters_list:
+                                if char in player_word_as_list:
+                                        print(char)
+                                        print('Your word contained a prohibited character')
+                                        print('')
+                                        Switch = 30
+                                        #I need to break out of the for loop and re renter the main loop (add break?)
+                        while Switch == 20:
+                                print('Did you choose the proper word?   Word = ' + player_word)
+                                print('Type \"Yes\" if you did and \"No\" if you didnt')
+                                right_word = input()
+                                if right_word.lower() == 'Yes'.lower():
+                                        return player_word_as_list
+                                else:
+                                        break
                 else:
-                    print('failure')
-                    break
-        
- 
-
+                        print()
+                        print('Enter a word that is < 21 chars') 
     
     
+def drawEmptyLines(player_word_as_list):
+        for char in player_word_as_list:
+                if char == ' ':
+                        print('    ', end = '')
+                else:
+                        print('____ ', end = '')
 
 
-chooseWord()
+a= chooseWord()
 
-#print(a)
-
+drawEmptyLines(a)
