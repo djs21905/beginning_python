@@ -3,14 +3,14 @@ import ChooseWord
 
 
 # Player chooses their word.
-player_word = ChooseWord.chooseWord()
+player_word = ChooseWord.mysteryWord()
 print('\n' *200)
 
 #The gallows is drawn
 print('\n' * 5)
 
 # The player board is drawn
-ChooseWord.drawEmptyLines(player_word)
+ChooseWord.drawBoard(player_word)
 
 letters_used = []
 guesses= 0
@@ -31,7 +31,7 @@ while guesses < 6:
                 print('\n' * 10)
                 DrawGallows.gallows(guesses)
                 print('\n' * 5)
-                ChooseWord.drawEmptyLines(player_word)
+                ChooseWord.drawBoard(player_word)
 
 print('Sorry you lose the word was ' + ''.join(player_word))
 

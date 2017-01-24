@@ -1,11 +1,9 @@
-# Player Chooses a word <21 Chars
-# If the Word is <21 chars it enters the for loop 
-# If the word is >=21 the program prompts the user to enter a word of proper length. 
-# The for loop checks each item in the bad_characters_list against the player_word_as_list
-# If one of those items shows up in the player_word_as_list "fail" is printed
-# Otherwise, the player_word_as_list is returned.
+# Defines the function mysteryWord which allows the player to choose a hangman word
+# The word must be no longer than 20 characters and greater than 0 
+# The word can not contain any characters from the bad_characters_list
+# TODO: Streamline the code. Make it more readable and efficient if possible. 
 
-def chooseWord():
+def mysteryWord():
         bad_characters = '0123456789!@#/<>`~!.?'
         bad_characters_list = list(bad_characters)
         while True:
@@ -32,12 +30,22 @@ def chooseWord():
                         print()
                         print('Enter a word that is < 21 chars') 
     
-    
-def drawEmptyLines(player_word_as_list):
+# Defines the function drawBoard which prints a hangman board 
+# Iterates through the player_word_as_list and print a ____ for each character 
+# If the character is an empty space an empty space is printed   
+# COMPLETED 01/24/17
+
+# Create each string type into a list 
+
+def drawBoard(player_word_as_list):
+        empty_line_object = ['_____  ']
+        space_object = ['     ']
         for char in player_word_as_list:
                 if char == ' ':
-                        print('    ', end = '')
+                        print(space_object[0], end = '')
                 else:
-                        print('____ ', end = '')
+                        print(empty_line_object[0], end = '')
+                              
+
 
 
