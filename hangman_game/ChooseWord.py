@@ -39,20 +39,15 @@ def drawBoard(player_word_as_list,guess_list,counter):
         empty_line_object = '_ '
         space_object = ''
         blank_list = []
+        for item in player_word_as_list:
+                if item != ' ':
+                        blank_list.append(empty_line_object)
+                else:   
+                        blank_list.append('  ')
         if counter == 0: 
-                for item in player_word_as_list:
-                        if item != ' ':
-                                blank_list.append(empty_line_object)
-                        else:   
-                                blank_list.append('  ')
                 print (''.join(blank_list))
         else:
         # I want the first part to happen once in the beginning and the second part to happen the rest
-                for item in player_word_as_list:
-                        if item != ' ':
-                                blank_list.append(empty_line_object)
-                        else:   
-                                blank_list.append('  ')
                 for x in guess_list:
                         if x in player_word_as_list:
                                 a = player_word_as_list.index(x)
