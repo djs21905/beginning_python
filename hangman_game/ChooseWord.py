@@ -33,7 +33,7 @@ def mysteryWord():
 # Defines the function drawBoard which prints a hangman board 
 # Iterates through the player_word_as_list and print a ____ for each character 
 # If the character is an empty space an empty space is printed   
-# COMPLETED 01/24/17
+# TODO: Add handling for duplicate letters in the word. 
 
 def drawBoard(player_word_as_list,guess_list,counter):
         empty_line_object = '_ '
@@ -47,12 +47,14 @@ def drawBoard(player_word_as_list,guess_list,counter):
         if counter == 0: 
                 print (''.join(blank_list))
         else:
-        # I want the first part to happen once in the beginning and the second part to happen the rest
                 for x in guess_list:
                         if x in player_word_as_list:
                                 a = player_word_as_list.index(x)
                                 blank_list[a] = x
+                        if player_word_as_list.count(x) > 1:
+                                blank_list[a] = x
                 print (''.join(blank_list))
+        return blank_list
                                 
 
 
