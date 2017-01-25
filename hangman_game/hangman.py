@@ -1,7 +1,6 @@
 import DrawGallows
 import ChooseWord
 
-
 # Player chooses their word.
 player_word = ChooseWord.mysteryWord()
 print('\n' *200)
@@ -10,11 +9,15 @@ print('\n' *200)
 print('\n' * 5)
 
 # The player board is drawn
-ChooseWord.drawBoard(player_word)
+#ChooseWord.drawBoard(player_word)
 
 letters_used = []
 guesses= 0
+counter = 0 
 while guesses < 6:
+    print()
+    print()
+    ChooseWord.drawBoard(player_word, letters_used, counter)
     print('\nPlease enter a letter: ')
     letter_guess = input()
     if letter_guess not in letters_used:
@@ -22,7 +25,7 @@ while guesses < 6:
             if letter_guess in player_word:
                 print('Congrats! ' + letter_guess +' is in the mystery word')
                 letters_used.append(letter_guess)
-                print('Letters used =', letters_used, end = '')
+                print('Letters used =', letters_used, end = '')               
             else:
                 print('Sorry....'+ letter_guess +' is not in the mystery word')
                 guesses += 1
@@ -31,9 +34,9 @@ while guesses < 6:
                 print('\n' * 10)
                 DrawGallows.gallows(guesses)
                 print('\n' * 5)
-                ChooseWord.drawBoard(player_word)
+    counter +=1                
 
 print('Sorry you lose the word was ' + ''.join(player_word))
 
     
-#find a way to replace the empty slots with correct guesses
+

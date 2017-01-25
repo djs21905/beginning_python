@@ -35,17 +35,36 @@ def mysteryWord():
 # If the character is an empty space an empty space is printed   
 # COMPLETED 01/24/17
 
-# Create each string type into a list 
+def drawBoard(player_word_as_list,guess_list,counter):
+        empty_line_object = '_ '
+        space_object = ''
+        blank_list = []
+        if counter == 0: 
+                for item in player_word_as_list:
+                        if item != ' ':
+                                blank_list.append(empty_line_object)
+                        else:   
+                                blank_list.append('  ')
+                print (''.join(blank_list))
+        else:
+        # I want the first part to happen once in the beginning and the second part to happen the rest
+                for item in player_word_as_list:
+                        if item != ' ':
+                                blank_list.append(empty_line_object)
+                        else:   
+                                blank_list.append('  ')
+                for x in guess_list:
+                        if x in player_word_as_list:
+                                a = player_word_as_list.index(x)
+                                blank_list[a] = x
+                print (''.join(blank_list))
+                                
 
-def drawBoard(player_word_as_list):
-        empty_line_object = ['_____  ']
-        space_object = ['     ']
-        for char in player_word_as_list:
-                if char == ' ':
-                        print(space_object[0], end = '')
-                else:
-                        print(empty_line_object[0], end = '')
-                              
+
+                        
+
+                 
+                           
 
 
 
