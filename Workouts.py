@@ -2,7 +2,7 @@
 
 
 #Defines a dictionary that correlates a day of the week with a workout.
-workout_day = {                  "M" : 'Legs' ,
+workout_day = {          "M" : 'Legs' ,
                          "T" : 'Cardio + Stretch' ,
                          "W" : 'Chest + Triceps' ,
                         "Th" : 'Back + Biceps',
