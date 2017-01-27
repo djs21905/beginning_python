@@ -1,4 +1,4 @@
-#Gallows class that defines the function gallows.
+#Gallows function that creates ASCII gallows.
 #Allows the user to choose and integer ranging from 0-6
 #  Each value corresponds to a different image displayed
 #  0 = No body parts
